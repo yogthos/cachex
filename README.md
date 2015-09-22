@@ -4,6 +4,8 @@ A Clojure library for caching s-expressions.
 
 ## Usage
 
+[![Clojars Project](http://clojars.org/cachex/latest-version.svg)](http://clojars.org/cachex)
+
 The library provides helper functions for creating different types of
 caches using the [core.cache](https://github.com/clojure/core.cache).
 
