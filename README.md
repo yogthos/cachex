@@ -19,18 +19,13 @@ is expected to be free of side effects.
 (def C (cache/lru-cache))
 
 (time
-  (cache/memoized C :foo
+ (dotimes [i 10]
+   (cache/memoized
+    C :foo
     (Thread/sleep 1000)
-    :ok))
-:ok
-;"Elapsed time: 1004.221474 msecs"
-
-(time
-  (cache/memoized C :foo
-    (Thread/sleep 1000)
-    :ok))
-:ok
-;"Elapsed time: 0.335598 msecs"
+    :ok)))
+=> :ok    
+;;"Elapsed time: 1004.532143 msecs"    
 ```
 
 Types caches supported:
